@@ -1,24 +1,28 @@
-import logo from './logo.svg';
+import React from 'react';
 import './App.css';
+import Form from './Form';
+import AnimatedDollarSign from "./video/animateddollarsign.mp4"
+
 
 function App() {
   return (
+    
+    <div className='bg-image'
+    style={{
+      height: '100vh',
+      overflow: 'hidden' 
+    }}>
+    
+    <video autoPlay loop muted id="video">
+    <source src={AnimatedDollarSign} type="video/mp4"/>
+    </video>
+
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+     <Form />
     </div>
+    </div>
+
+    
   );
 }
 
